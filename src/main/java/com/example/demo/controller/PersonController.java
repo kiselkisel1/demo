@@ -33,9 +33,9 @@ public class PersonController {
 
     @PutMapping("{id}")
     public Person update(@PathVariable("id") Integer id,
-                        @RequestBody @Valid Person genreFromUser) {
+                         @RequestBody @Valid Person genreFromPerson) {
         Person genreFromDb = personService.getOne(id);
-        BeanUtils.copyProperties(genreFromUser,genreFromDb,"id");
+        BeanUtils.copyProperties(genreFromPerson,genreFromDb,"id");
         return personService.save(genreFromDb);
     }
 

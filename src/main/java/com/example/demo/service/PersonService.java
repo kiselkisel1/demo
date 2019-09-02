@@ -1,9 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.model.Person;
-import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
 
