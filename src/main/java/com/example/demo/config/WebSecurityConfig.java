@@ -28,7 +28,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return map -> {
             //sub содержит id пользователя
            String id=(String) map.get("sub");
-          User user= userDetailsRepository.findById(Long.valueOf(id)).orElseGet(()->{
+          User user= userDetailsRepository.findById(id).orElseGet(()->{
                User newUser=new User();
                newUser.setId(id);
                newUser.setName((String)map.get("name"));
