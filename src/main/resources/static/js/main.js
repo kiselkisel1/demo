@@ -1,9 +1,3 @@
-import Vue from 'vue'
- import VueI18n from 'vue-i18n'
- import Locales from './vue-i18n-locales.js';
-
- Vue.use(VueI18n)
-
 function getIndex(list, id) {
   for (var i = 0; i < list.length; i++) {
     if (list[i].id == id) {
@@ -36,7 +30,7 @@ Vue.component('person-form', {
   template:
     '<div class="container">' +
     '<div>' +
-    '<label>{{ $t("app.name") }}</label>' +
+    '<label>Name : </label>' +
     '<input type="name" placeholder="Input name" v-model="name" />' +
     '</div>'+
     '<label>Surname: </label>' +
